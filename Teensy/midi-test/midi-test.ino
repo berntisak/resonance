@@ -3,6 +3,7 @@
 // Simple tutorial on how to receive and send MIDI messages.
 // Here, when receiving any message on channel 4, the Arduino
 // will blink a led and play back a note for 1 second.
+// JONAS TEST
 
 MIDI_CREATE_DEFAULT_INSTANCE();
 
