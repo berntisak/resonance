@@ -1,8 +1,7 @@
 #include <MIDI.h>
 
-// Simple tutorial on how to receive and send MIDI messages.
-// Here, when receiving any message on channel 4, the Arduino
-// will blink a led and play back a note for 1 second.
+// PWM (pin 10) contorol of eBow on CC 23
+// On/off (pint 11) control of solenoide on any MIDI note on
 
 MIDI_CREATE_DEFAULT_INSTANCE();
 
@@ -25,19 +24,6 @@ void setup()
 }
 
 void ccIn(byte channel, byte number, byte value) {
-  if (number == 22) {
-
-    int vInt = (int)value;
-
-    if (vInt >= 64) {    
-      digitalWrite(SOLENOIDE, vInt);
-      digitalWrite(LED,vInt);
-    }
-    else {
-      digitalWrite(SOLENOIDE, 0);
-      digitalWrite(LED,0);
-    }
-  }
 
   if (number == 23) {
     int intVal = (int)value;
