@@ -33,15 +33,19 @@ void ccIn(byte channel, byte number, byte value) {
 }
 void NoteOn(byte channel, byte pitch, byte velocity) {
   digitalWrite(SOLENOIDE, HIGH);
-  digitalWrite(LED,HIGH);
+  digitalWrite(LED, HIGH);
 }
 
 void NoteOff(byte channel, byte pitch, byte velocity) {
   digitalWrite(SOLENOIDE, LOW);
-  digitalWrite(LED,LOW);
+  digitalWrite(LED, LOW);
 }
 
 void loop()
 {
     MIDI.read();
+    digitalWrite(LED, HIGH);
+    delay(100);
+    digitalWrite(LED, LOW);
+    delay(1000);
 }
