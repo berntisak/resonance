@@ -2,7 +2,6 @@
 
 // PWM (pin 10) contorol of eBow on CC 23
 // On/off (pint 11) control of solenoide on any MIDI note on
-// Jonas-test
 
 MIDI_CREATE_DEFAULT_INSTANCE();
 
